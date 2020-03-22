@@ -1,0 +1,68 @@
+
+Video 1 : Introduction to framework and problems it solves
+Video 2 : Definition of Authentication, Authorization, Principal, Granted Authorities, Roles
+
+Video 3: [Code]: Add Security to SpringBoot app
+	Tutorial:
+
+	Step0: No Config (just add dependency ss-starter)
+		Default behavior:
+			Enable SS Filter			
+			All urls are secured
+			Login and credentials (see logs)
+			How to login: user, log pw
+
+	Step1: Override default User credentials
+
+
+Video 4: How to configure Spring Security Authentication
+		
+		AuthenticationManager
+		AuthenticationBuilder
+		Setup inMemory AuthenticationManager
+		
+		Other AuthenticationManager (Db, Ldap, )
+		
+		
+Video 5: How to configure Spring Security Authorization:
+
+		HttpSecurity
+		byRole
+		antMatchers
+		/logout
+		permitAll
+		
+		
+Video 6: How to setup JDBC authentication with Spring Security from scratch
+
+		.jdbAuthentication().datasource(datasource)
+		.withDefaultSchema()
+		.withUser()
+		different schema (schema.sql mechanism, data.sql)
+		.userByUsernameQuery()
+		.authoritiesByUsernameQuery()
+		
+		Additional Resource:
+			https://www.baeldung.com/spring-security-jdbc-authentication
+		
+		
+Video 7: Spring Boot + Spring Security with JPA authentication and MySQL from scratch
+
+			Tutorial:
+			UserDetailsService
+			UserDetails
+			Step1: Design with all hardcoded
+			Step2: 
+				JpaRepository (Spring Data)
+				Mapping UserEntity to UserDetails
+			
+
+Other Authentications: 
+		
+		
+		
+Video 8: 	What is JWT authorization really about
+Video 9: 	What is the structure of JWT
+Video 10: 	
+
+	

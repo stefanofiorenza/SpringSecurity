@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+  <parent>
+    <groupId>com.knits.sbs.course</groupId>
+    <artifactId>SBS-000-MASTER</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>SBS-100-Authentications</artifactId>
+  <packaging>pom</packaging>
+  <name>SBS-100-Authentications</name>
+  
+   <modules> 
+  	<module>SBS-100-Starter-Unsecure</module>
+  	<module>SBS-105-DefaultSecuritySboot</module>
+  	<module>SBS-110-Auth-HttpBased</module>
+  	<module>SBS-120-AuthForm</module>
+  	<module>SBS-125-AuthFormRest</module>  	
+  	<module>SBS-130-Auth-Jdbc</module>
+  	<module>SBS-140-Auth-Jpa</module>
+  	<module>SBS-150-Auth-SAML2</module>
+  	<module>SBS-160-Auth-JWT</module>
+  	<module>SBS-170-Auth-OAuth2</module>
+  	<module>SBS-180-Auth-X509</module>  
+  </modules>
+  
+  
+</project>

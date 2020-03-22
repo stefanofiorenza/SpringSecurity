@@ -1,0 +1,43 @@
+
+
+
+
+105-Unsecure
+
+110-BasicSS
+- Default with SBoot autoconfiguration
+- Overrides:
+	InMemoryUsers
+	Authorization.
+		basicAuth
+		formLogin
+		
+		
+		
+		
+		
+	Default page for non authorized (Whitelabel)
+		
+120-FormAuth
+	
+	
+??-UserManagement:
+- Custom Authentication 
+- Registration
+- Email confirmation
+- Prevent many requests
+
+
+
+
+
+CODE REVIEW:
+
+1) where it comes default login? 
+	(LoginUrlAuthenticationEntryPoint) What enables filters to check authorization (if not authorized triggers authentication)
+	
+	Among those Filters, the one who renders default page is:
+	org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter
+
+		in method:
+			.generateLoginPageHtml

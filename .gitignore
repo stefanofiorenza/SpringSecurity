@@ -1,0 +1,6 @@
+.project
+.classpath
+**/.settings/**
+Demo/Trainer/SBS-000-MASTER/SBS-100-Authentications/SBS-105-DefaultSecuritySboot/target/classes/META-INF/MANIFEST.MF
+**/target/**
+Docs/SS4Slides.bmp

@@ -1,0 +1,50 @@
+MOVE THIS RESOURCE TO .MD FORMAT
+
+
+
+
+
+
+
+SS CORE COMPONENTS (Code review)
+
+	Authentication Provider
+	Authentication Object
+	Custom Authentication
+	Security Interceptor
+	Security Interceptor Types
+	User Detail Service
+	Security Context Holder
+	User Details
+	Password Encoding
+	Salting
+
+CONFIGURATION:
+	
+
+AUTHENTICATION:
+	
+	Default Security in Spring Boot
+	Http Basic Authentication
+	Form Based Authentication
+	JDBC Authentication
+	JPA Authentication
+	JWT Authentication
+	OAUTH2 Authentication
+	SAML2 Authentication
+	X509 Authentication
+	LDAP Authentication 
+	User management 
+
+AUTHORIZATION:
+	Authorization in Views
+	Authorize Tag
+	Access to Principal
+	Pre-Authorize
+	Post-Authorize
+	Roles Allowed
+	Pre-filter
+	Post-filter
+	Security Expression Language
+	
+

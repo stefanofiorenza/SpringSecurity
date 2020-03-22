@@ -1,0 +1,28 @@
+Courseware:
+
+https://howtodoinjava.com/spring-security-tutorial/
+
+https://www.javainuse.com/spring/sprboot_sec
+
+https://www.baeldung.com/security-spring
+
+
+2011
+https://mkyong.com/tutorials/spring-security-tutorials/
+
+
+
+
+
+Resources By Topic:
+
+https://www.javainuse.com/spring/boot-jwt
+
+
+Multi factor
+https://developer.okta.com/blog/2018/06/12/mfa-in-spring-boot
+
+SSO
+https://developer.okta.com/blog/2017/11/20/add-sso-spring-boot-15-min
+
+https://dzone.com/articles/secure-a-spring-boot-app-with-spring-security-and
