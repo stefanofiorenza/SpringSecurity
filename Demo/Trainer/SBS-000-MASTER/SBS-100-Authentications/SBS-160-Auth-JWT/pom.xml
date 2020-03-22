@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.knits.sbs.course</groupId>
-    <artifactId>SBS-000-MASTER</artifactId>
+       <artifactId>SBS-100-Authentications</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>SBS-160-Auth-JWT</artifactId>

@@ -12,18 +12,26 @@
   <name>SBS-100-Authentications</name>
   
    <modules> 
-  	<module>SBS-100-Starter-Unsecure</module>
-  	<module>SBS-105-DefaultSecuritySboot</module>
+   <!-- 	
+   <module>SBS-100-Starter-Unsecure</module>  
+    <module>SBS-105-DefaultSecuritySboot</module>
   	<module>SBS-110-Auth-HttpBased</module>
   	<module>SBS-120-AuthForm</module>
   	<module>SBS-125-AuthFormRest</module>  	
   	<module>SBS-130-Auth-Jdbc</module>
   	<module>SBS-140-Auth-Jpa</module>
-  	<module>SBS-150-Auth-SAML2</module>
-  	<module>SBS-160-Auth-JWT</module>
-  	<module>SBS-170-Auth-OAuth2</module>
-  	<module>SBS-180-Auth-X509</module>  
-  </modules>
+  
+   -->
+	    <module>SBS-105-AuthenticationCommon</module>
+	  	<module>SBS-110-Basic</module>
+	  	<module>SBS-120-JdbcAuthentication</module>
+	  	<module>SBS-130-JpaAuthentication</module>
+	  	<module>SBS-140-RestToken</module>
+	    <module>SBS-150-Auth-SAML2</module>
+	  	<module>SBS-160-Auth-JWT</module>
+	  	<module>SBS-170-Auth-OAuth2</module>
+	  	<module>SBS-180-Auth-X509</module>   
+   </modules>
   
   
 </project>

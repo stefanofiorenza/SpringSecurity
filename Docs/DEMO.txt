@@ -11,14 +11,34 @@
 	Authorization.
 		basicAuth
 		formLogin
+	
+	Changing defaults:	
+		- Default page for non authorized (Whitelabel) -> Entrypoin
 		
-		
-		
-		
-		
-	Default page for non authorized (Whitelabel)
-		
-120-FormAuth
+120-JdbcAuthentication
+	
+	- Setup Datasource
+	- default schema (provided by Sboot)
+	- Default Schema and Data setup
+	- CommandRunner
+	
+	- Setup AuthorizationProvider
+	- Query Customization for non default schema
+	
+
+
+130-JpaAuthentication
+
+140-JwtAuthentication
+
+150-X509Authentication
+
+160-OAuthAuthentication
+
+170-Saml2Authentication
+
+180- FormAuth
+	All details and customization over form view
 	
 	
 ??-UserManagement:
