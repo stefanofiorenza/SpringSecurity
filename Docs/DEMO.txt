@@ -31,6 +31,111 @@
 
 140-JwtAuthentication
 
+	Milestone1: (Login with inMemory credentials)
+		1. custom AuthenticationProvider (UserDetailsService)
+		2. loadByUSername (inMemory to make it easier)
+		3. Test login with inMemory Credentials
+	
+	Milestone2: Add JWT: Create Token
+	
+	Dependencies:
+		1. Add dependency io.jsonwebtoken jjwt
+		2. Necessary jaxb (since 1.9) 
+	
+	
+	Create JwtUtil class with following responsibilities:
+			3.1) create a new JWT given user details
+				String .generateToken(UserDetails userDetails)
+					Jwts.builder() will do the job:
+					
+						input:
+						- empty Map (claims)
+						- subject = username
+						- issue date
+						- expiration date
+						- sign with (algorithm) + secretKey
+					
+					
+					TEST: Test JwtUtil.generateToken(username) with jwt parser on line
+						
+						claims = payload (map of key-value statements such as role:admin) useful for next jwt lookup
+						ex:
+						usernameme, role, locale, etc.
+						
+			3.2) fetch amd validate username given its jwt
+				token -> Claim (object jwt payload)
+				claim -> value by key
+				instead of accessing by key is accessed by function (for each key) Claims::function
+				(those functions are implemented in io.jsonwebtoken.impl.DefaultClaims)
+				
+				extract username and issuedDate
+				verify that 
+				3.2.1) it is not expired
+				3.2.2) name matches username provided
+				
+				code review:
+				DefaultJwtParser -> DefaultClaims
+		
+
+	Milestone3:
+		Create /authenticate rest endpoint
+				authenticate(username, password) -> jwt String
+				delegate JwtUtil class.
+				
+				Next request will contain jwt string as a header (bearer) and they will be authenticated
+				
+				AuthenticationRequestDto (username, password)
+				AuthenticationResponseDto (string jwt)
+				
+				method:
+				
+					/* (PROBABLY NECESSARY TO ADD USER IN SECURITY CONTEXT)
+					Delegate authenticatio to the injected AuthenticationManager (is configured from SBS Context) 
+						authenticationManager.authenticate	
+						onFailure exception
+						
+						return UsernamePasswordAuthenticationToken (extract username)
+					*/
+					
+					JwtUtil.generateToken(username)
+
+					return ResponseEntity.ok(new AuthenticationResponseDto(jwt));
+			
+		
+		Enable /authenticate for all requests (anonymous too)		
+		.authorizeRequests().antMatcher("/authenticate").permitAll()
+			
+		might be necessary (according to SBS version) to expose as @Bean the AuthenticationManager from parent class
+		overriding the method
+		
+		Test with curl or postman
+		
+	Milesone 4):
+		Send jwt in all next requests as Authorization header with value bearer <jwtCode>
+		
+		4.1) Ask SS to listen to all requests for extracting Authorization header 
+		validate jwt 
+		fetch the appropriate Principal to put in the Security Context
+		
+		4.2) JwtRequestFilter extends OncePerRequestFilter (spring)
+			
+			authenticate jwt. 
+			-> map jwt into UserDetails to save in SecurityContext
+			
+			Steps:
+				extract jwt header (bearer 7 chars)
+				extract username from payload
+				Search in Db for that username
+				
+				if username exists validate in JwtUtil (username and not expired)
+			
+				if valid in JwtUtil save UserDetails in SecurityContext
+			 
+		4.3) Disable session management for the Principal
+		
+				.and().sessionManagement()
+				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+					
 150-X509Authentication
 
 160-OAuthAuthentication

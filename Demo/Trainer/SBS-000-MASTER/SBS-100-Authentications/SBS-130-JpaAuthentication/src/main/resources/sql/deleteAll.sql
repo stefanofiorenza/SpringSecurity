@@ -1,0 +1,3 @@
+DELETE FROM user_roles;
+DELETE FROM role;
+DELETE FROM user;

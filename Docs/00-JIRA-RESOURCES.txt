@@ -67,6 +67,28 @@ AUTHENTICATION:
 	SAML2 Authentication
 		https://medium.com/@viraj.rajaguru/how-to-use-spring-saml-extension-7ffe0dd38465
 		
+		SAML SS and Okta
+		https://www.youtube.com/watch?v=YN2DOJttEaA
+		https://github.com/talk2amareswaran/Spring-Boot-SAML-and-OKTA
+		
+		https://developer.okta.com/blog/2017/03/16/spring-boot-saml
+		
+		Vid:	https://www.youtube.com/watch?v=SgLQfD7c3EY
+		Git: 	https://github.com/talk2amareswaran/Single-sign-on-spring-Boot-2.0
+		
+		
+		Veloce con Okta Id Provider:
+		https://www.youtube.com/watch?v=SgLQfD7c3EY
+		
+		SAML2
+		Introduction
+		Video: https://www.youtube.com/watch?v=SvppXbpv-5k
+		
+		https://www.youtube.com/watch?v=-hWaEy7_XQU
+		
+		Intro: (SSO and main concepts)
+		https://www.youtube.com/watch?v=gUmMcecHN9s
+		
 	X509 Authentication
 		https://www.baeldung.com/x-509-authentication-in-spring-security
 		
